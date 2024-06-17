@@ -1,0 +1,22 @@
+version: 1.0.{build}
+
+image: node
+
+platform:
+  - x64
+
+environment:
+  matrix:
+    - nodejs_version: "16"
+
+install:
+  - npm install
+
+test_script:
+  - npm test
+
+build: off
+
+init:
+  matrix:
+    - nodejs_version: "16"
